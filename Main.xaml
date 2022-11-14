@@ -98,13 +98,13 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard sap2010:Annotation.AnnotationText="1) Open cmd&#xD;&#xA;2) type first command and press enter.&#xD;&#xA;3) type second command and press enter." AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application: Símbolo del sistema" sap:VirtualizedContainerService.HintSize="434,1638" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="b6be3c31-5b5f-4500-9a1f-a636eef52313" Version="V2">
+      <uix:NApplicationCard sap2010:Annotation.AnnotationText="1) Open cmd&#xD;&#xA;2) type first command and press enter.&#xD;&#xA;3) type second command and press enter." AttachMode="ByInstance" CloseMode="Always" DisplayName="Activity-2 Use Application: Símbolo del sistema" sap:VirtualizedContainerService.HintSize="434,1638" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="b6be3c31-5b5f-4500-9a1f-a636eef52313" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1281" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Activity-3 Do" sap:VirtualizedContainerService.HintSize="400,1281" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="copiedText" />
               </Sequence.Variables>
@@ -113,22 +113,22 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,234" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="ipconfig /all[k(enter)]" Version="V3" />
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,234" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="ping www.google.com[k(enter)]" Version="V3" />
-              <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="358,97" sap2010:WorkflowViewState.IdRef="Delay_1" />
-              <uix:NKeyboardShortcuts ActivateBefore="True" sap2010:Annotation.AnnotationText="shortcut to select all text" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="358,219" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)]" Version="V3">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Activity-4 Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,234" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="ipconfig /all[k(enter)]" Version="V3" />
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Activity-5 Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,234" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="ping www.google.com[k(enter)]" Version="V3" />
+              <Delay DisplayName="Activity-6 Delay" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="358,97" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <uix:NKeyboardShortcuts ActivateBefore="True" sap2010:Annotation.AnnotationText="shortcut to select all text" ClickBeforeMode="None" DisplayName="Activity-7 Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="358,219" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)]" Version="V3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NKeyboardShortcuts>
-              <ui:CopySelectedText SendWindowMessages="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Copy Selected Text" sap:VirtualizedContainerService.HintSize="358,32" sap2010:WorkflowViewState.IdRef="CopySelectedText_1">
+              <ui:CopySelectedText SendWindowMessages="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Activity-8 Copy Selected Text" sap:VirtualizedContainerService.HintSize="358,32" sap2010:WorkflowViewState.IdRef="CopySelectedText_1">
                 <ui:CopySelectedText.Result>
                   <OutArgument x:TypeArguments="x:String">[copiedText]</OutArgument>
                 </ui:CopySelectedText.Result>
               </ui:CopySelectedText>
-              <ui:WriteTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="save the selectefd text to the txt file." DisplayName="Write Text File" FileName="cmdText.txt" sap:VirtualizedContainerService.HintSize="358,173" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[copiedText]">
+              <ui:WriteTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="save the selectefd text to the txt file." DisplayName="Activity-9 Write Text File" FileName="cmdText.txt" sap:VirtualizedContainerService.HintSize="358,173" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[copiedText]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
