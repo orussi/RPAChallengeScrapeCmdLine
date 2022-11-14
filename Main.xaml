@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="580,1795" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="580,2002" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
       <x:String>System.Activities</x:String>
@@ -85,25 +85,26 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Activity-0" sap:VirtualizedContainerService.HintSize="538,1730" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Activity-0" sap:VirtualizedContainerService.HintSize="538,1937" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Activity-1" sap:VirtualizedContainerService.HintSize="496,1640" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="This project type the next two commands in the cmd:&#xD;&#xA;ipconfig /all&#xD;&#xA;ping www.google.com&#xD;&#xA;And after this save all the text from the cmd to the text file cmdText.txt (which is placed in the root of this project)." DisplayName="Activity-1" sap:VirtualizedContainerService.HintSize="496,1847" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application: Símbolo del sistema" sap:VirtualizedContainerService.HintSize="434,1518" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="b6be3c31-5b5f-4500-9a1f-a636eef52313" Version="V2">
+      <uix:NApplicationCard sap2010:Annotation.AnnotationText="1) Open cmd&#xD;&#xA;2) type first command and press enter.&#xD;&#xA;3) type second command and press enter." AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application: Símbolo del sistema" sap:VirtualizedContainerService.HintSize="434,1638" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Always" ScopeGuid="b6be3c31-5b5f-4500-9a1f-a636eef52313" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1218" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1281" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="copiedText" />
               </Sequence.Variables>
@@ -115,19 +116,36 @@
               <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,234" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="ipconfig /all[k(enter)]" Version="V3" />
               <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,234" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="ping www.google.com[k(enter)]" Version="V3" />
               <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="358,97" sap2010:WorkflowViewState.IdRef="Delay_1" />
-              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="358,188" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)]" Version="V3" />
+              <uix:NKeyboardShortcuts ActivateBefore="True" sap2010:Annotation.AnnotationText="shortcut to select all text" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="358,219" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)]" Version="V3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NKeyboardShortcuts>
               <ui:CopySelectedText SendWindowMessages="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Copy Selected Text" sap:VirtualizedContainerService.HintSize="358,32" sap2010:WorkflowViewState.IdRef="CopySelectedText_1">
                 <ui:CopySelectedText.Result>
                   <OutArgument x:TypeArguments="x:String">[copiedText]</OutArgument>
                 </ui:CopySelectedText.Result>
               </ui:CopySelectedText>
-              <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="cmdText.txt" sap:VirtualizedContainerService.HintSize="358,142" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[copiedText]" />
+              <ui:WriteTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="save the selectefd text to the txt file." DisplayName="Write Text File" FileName="cmdText.txt" sap:VirtualizedContainerService.HintSize="358,173" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[copiedText]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:WriteTextFile>
             </Sequence>
           </ActivityAction>
         </uix:NApplicationCard.Body>
         <uix:NApplicationCard.TargetApp>
           <uix:TargetApp Area="584, 451, 993, 519" FilePath="C:\Windows\System32\cmd.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIHSURBVFhH7ZdLaxpRGIaHKBEJQUFxIQjeEEFFEEUUEURURNS/0X3IIlAC5qKdaLFSqylNfk+beF8lK7PLX7CrvD2fN2Z0EiQ4GqgvPDgevzPfM8NBzuF22Xr4Su1z4eILNslFsVxgrfcZe1yJL788Dp8xeHhiDNfKp5Oa5CdJsOaGsUS19mPU7Q8wpzdAR5I+Ot0+2nN6aHUm0DjN6/ZZDauj32n8vt3FXauDP/dt/L5rzZkK2BgHXPP6dpTP50Hkcjlks1lkMhmk02mkUikkEgnE43HEYjFEo1FEIhGEw2EEg0H4/X74fD54vV54PB64XC44nU44HA5YLBYYjUbodDqo1WpqOGcq4GAcMoGb7Qo0mr+2K1Bv/Py7KDDLawIU2QQoszdAmQlQZBGo1Zvj5lICb70BykzA7XbDbrfDarXCbDbDZDJBr9dDq9VCo9FApVKtRyAUCo2f1GazjesoSqVSdPNVWFmAQk3pySjCmxBSY6sgEvj2vSESEC5Cen3CiYtQhNdvRThPJMD+CUUCgUBgadGsG0mBZDIJg8GwVCwHSwK0uhdXqpyIBEr8VygUiqUiOREJTL9slJ3ATmAn8LEEaI9+Wrgc0eB7OC9eochXwFeqKF1VcVkq40yiTsjR8UmdNZ/silnogEB7dBogq01AvSbnApa96QXZHG4I6jU5Gf3n4bh/yEbmXwyqKk4AAAAASUVORK5CYII=" InformativeScreenshot="318d080f32d7653a3255d3b81422108d.png" Selector="&lt;wnd app='cmd.exe' cls='ConsoleWindowClass' title='Símbolo del sistema' /&gt;" />
         </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
     </Sequence>
   </Sequence>
